@@ -1,0 +1,35 @@
+x-ubuntu: &ubuntu
+  build: .
+  image: practica8-ubuntu
+  restart: unless-stopped
+
+services:
+  servidor1:
+    <<: *ubuntu
+    hostname: servidor1
+    ports:
+      - "127.0.0.1:2221:22"
+
+  servidor2:
+    <<: *ubuntu
+    hostname: servidor2
+    ports:
+      - "127.0.0.1:2222:22"
+
+  servidor3:
+    <<: *ubuntu
+    hostname: servidor3
+    ports:
+      - "127.0.0.1:2223:22"
+
+  servidor4:
+    <<: *ubuntu
+    hostname: servidor4
+    ports:
+      - "127.0.0.1:2224:22"
+
+  servidor5:
+    <<: *ubuntu
+    hostname: servidor5
+    ports:
+      - "127.0.0.1:2225:22"
